@@ -505,6 +505,8 @@ body {
   background-color: #fff;
   padding: 0 50px;
   margin-bottom: 180px;
+  /*   &__additional-information {
+    } */
 }
 @media (max-width: 61.99875em) {
   .user-info {
@@ -687,9 +689,10 @@ body {
   column-gap: 20px;
   flex-wrap: wrap;
 }
+
 .additional-information {
   display: grid;
-  grid-template-areas: "engineer engineer" "youtube codewars" "youtube githab" "footer footer";
+  grid-template-areas: "engineer engineer" "youtube codewars" "youtube githab" "experience experience";
   grid-template-rows: repeat(4, min-content);
   grid-template-columns: 32% calc(68% - 30px);
   grid-gap: 30px;
@@ -702,13 +705,13 @@ body {
 }
 @media (max-width: 61.99875em) {
   .additional-information {
-    grid-template-areas: "engineer engineer" "youtube youtube" "codewars githab" "footer footer";
+    grid-template-areas: "engineer engineer" "youtube youtube" "codewars githab" "experience experience";
     grid-template-columns: 49% calc(51% - 25px);
   }
 }
 @media (max-width: 700px) {
   .additional-information {
-    grid-template-areas: "engineer" "youtube " "codewars" "githab" "footer";
+    grid-template-areas: "engineer" "youtube " "codewars" "githab" "experience";
     grid-template-columns: 1fr;
   }
 }
@@ -720,13 +723,20 @@ body {
 .additional-information__item {
   border: 1px solid #000;
 }
+.additional-information__item .circle::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .additional-information__title {
   display: flex;
   width: 100%;
   align-items: center;
-  padding: 30px 30px 15px;
+  padding: 10px 15px;
   font-weight: 600;
   text-align: start;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 @media (max-width: 79.375em) {
   .additional-information__title {
@@ -735,8 +745,12 @@ body {
 }
 @media (max-width: 47.99875em) {
   .additional-information__title {
-    padding: 15px 15px 7.5px;
     font-size: 18px;
+  }
+}
+@media (max-width: 700px) {
+  .additional-information__title {
+    padding-right: 50px;
   }
 }
 @media (max-width: 29.99875em) {
@@ -745,17 +759,17 @@ body {
   }
 }
 .additional-information__title ~ div {
-  padding: 15px 30px 30px;
+  padding: 10px 15px;
   line-height: 29px;
+  font-size: 20px;
 }
 @media (max-width: 79.375em) {
   .additional-information__title ~ div {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media (max-width: 47.99875em) {
   .additional-information__title ~ div {
-    padding: 7.5px 15px 15px;
     font-size: 16px;
   }
 }
@@ -794,24 +808,104 @@ body {
 #engineer {
   grid-area: engineer;
 }
+#engineer .circle::after {
+  background-image: url(../img/icon/engineer.png);
+  left: 21px;
+  top: 16px;
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 29.99875em) {
+  #engineer .circle::after {
+    width: 43px;
+    height: 43px;
+    left: 10px;
+    top: 3px;
+  }
+}
 
 #youtube {
   grid-area: youtube;
+}
+#youtube .circle::after {
+  background-image: url(../img/icon/youtube-telegram.png);
+  left: -12px;
+  top: -11px;
+  width: 85px;
+  height: 85px;
+}
+@media (max-width: 29.99875em) {
+  #youtube .circle::after {
+    width: 60px;
+    height: 60px;
+    left: -7px;
+    top: -11px;
+  }
 }
 
 #codewars {
   grid-area: codewars;
 }
+#codewars .circle::after {
+  background-image: url(../img/icon/codewars.png);
+  background-size: 95%;
+  left: 22px;
+  top: 13px;
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 29.99875em) {
+  #codewars .circle::after {
+    width: 43px;
+    height: 43px;
+    left: 11px;
+    top: 9px;
+    background-size: 85%;
+  }
+}
 
 #githab {
   grid-area: githab;
 }
+#githab .circle::after {
+  background-image: url(../img/icon/githab.png);
+  background-size: 105%;
+  left: 11px;
+  top: 15px;
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 29.99875em) {
+  #githab .circle::after {
+    width: 43px;
+    height: 43px;
+    left: 8px;
+    top: 4px;
+  }
+}
 
-#footer {
-  grid-area: footer;
+#experience {
+  grid-area: experience;
+}
+#experience .circle::after {
+  background-image: url(../img/icon/notebook.png);
+  left: 19px;
+  top: 15px;
+  width: 55px;
+  height: 55px;
+}
+@media (max-width: 29.99875em) {
+  #experience .circle::after {
+    width: 43px;
+    height: 43px;
+    left: 10px;
+    top: 8px;
+    background-size: 89%;
+  }
 }
 
 .circle {
+  position: relative;
   flex: 0 0 60px;
   height: 60px;
   background: #f7971d;
@@ -830,20 +924,40 @@ body {
 }
 @media (max-width: 29.99875em) {
   .circle {
-    display: none;
+    flex: 0 0 40px;
+    height: 40px;
+    margin-right: 20px;
   }
 }
 
-/* 
-.spollers {
-
-  &__item {
+.spollers__title {
+  position: relative;
+}
+@media (max-width: 700px) {
+  ._spoller-init .spollers__title {
+    cursor: pointer;
   }
-
-  &__title {
+  ._spoller-init .spollers__title::before, ._spoller-init .spollers__title::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    background-color: #000;
+    border-radius: 8px;
+    height: 2px;
+    width: 10px;
+    transition: transform 0.5s ease 0s;
   }
-
-  &__body {
+  ._spoller-init .spollers__title::before {
+    transform: translate(-68%, -50%) rotate(40deg);
+  }
+  ._spoller-init .spollers__title::after {
+    transform: translate(0, -50%) rotate(-40deg);
+  }
+  ._spoller-init .spollers__title._spoller-active::before {
+    transform: translateX(-68%) rotate(-40deg);
+  }
+  ._spoller-init .spollers__title._spoller-active::after {
+    transform: rotate(40deg);
   }
 }
- */
