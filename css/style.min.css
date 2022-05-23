@@ -527,21 +527,27 @@ body {
     margin-bottom: 30px;
   }
 }
-.user-info__container {
+.user-info__wrapper {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
   column-gap: 50px;
+  margin-bottom: 50px;
 }
 @media (max-width: 79.375em) {
-  .user-info__container {
+  .user-info__wrapper {
     column-gap: 30px;
   }
 }
 @media (max-width: 61.99875em) {
-  .user-info__container {
+  .user-info__wrapper {
     flex-direction: column;
     row-gap: 10px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .user-info__wrapper {
+    margin-bottom: 30px;
   }
 }
 .user-info__left {
@@ -681,6 +687,83 @@ body {
   column-gap: 20px;
   flex-wrap: wrap;
 }
+.additional-information {
+  display: grid;
+  grid-template-areas: "engineer engineer" "youtube codewars" "youtube githab" "footer footer";
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: 32% calc(68% - 30px);
+  grid-gap: 30px;
+}
+@media (max-width: 79.375em) {
+  .additional-information {
+    grid-template-columns: 38% calc(62% - 25px);
+    grid-gap: 25px;
+  }
+}
+@media (max-width: 61.99875em) {
+  .additional-information {
+    grid-template-areas: "engineer engineer" "youtube youtube" "codewars githab" "footer footer";
+    grid-template-columns: 49% calc(51% - 25px);
+  }
+}
+@media (max-width: 700px) {
+  .additional-information {
+    grid-template-areas: "engineer" "youtube " "codewars" "githab" "footer";
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 29.99875em) {
+  .additional-information {
+    grid-gap: 20px;
+  }
+}
+.additional-information__item {
+  border: 1px solid #000;
+}
+.additional-information__title {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  padding: 30px 30px 15px;
+  font-weight: 600;
+  text-align: start;
+}
+@media (max-width: 79.375em) {
+  .additional-information__title {
+    font-size: 22px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .additional-information__title {
+    padding: 15px 15px 7.5px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .additional-information__title {
+    font-size: 18px;
+  }
+}
+.additional-information__title ~ div {
+  padding: 15px 30px 30px;
+  line-height: 29px;
+}
+@media (max-width: 79.375em) {
+  .additional-information__title ~ div {
+    font-size: 20px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .additional-information__title ~ div {
+    padding: 7.5px 15px 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .additional-information__title ~ div {
+    font-size: 16px;
+  }
+}
 
 .user-contact__title:not(:last-child) {
   margin-bottom: 25px;
@@ -707,3 +790,60 @@ body {
     font-size: 16px;
   }
 }
+
+#engineer {
+  grid-area: engineer;
+}
+
+#youtube {
+  grid-area: youtube;
+}
+
+#codewars {
+  grid-area: codewars;
+}
+
+#githab {
+  grid-area: githab;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+.circle {
+  flex: 0 0 60px;
+  height: 60px;
+  background: #f7971d;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+@media (max-width: 61.99875em) {
+  .circle {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 700px) {
+  .circle {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .circle {
+    display: none;
+  }
+}
+
+/* 
+.spollers {
+
+  &__item {
+  }
+
+  &__title {
+  }
+
+  &__body {
+  }
+}
+ */
