@@ -961,3 +961,376 @@ body {
     transform: rotate(40deg);
   }
 }
+
+.road-map__wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, max-content);
+  row-gap: 50px;
+}
+@media (max-width: 47.99875em) {
+  .road-map__wrapper {
+    row-gap: 30px;
+  }
+}
+.road-map__first-project {
+  grid-column: 1/9;
+  grid-row: 1/2;
+}
+@media (max-width: 61.99875em) {
+  .road-map__first-project {
+    grid-column: 1/10;
+  }
+}
+@media (max-width: 47.99875em) {
+  .road-map__first-project {
+    grid-column: 1/13;
+  }
+}
+.road-map__intensives {
+  grid-column: 4/13;
+  grid-row: 2/3;
+}
+@media (max-width: 79.375em) {
+  .road-map__intensives {
+    grid-column: 2/13;
+  }
+}
+@media (max-width: 640px) {
+  .road-map__intensives {
+    grid-column: 1/13;
+  }
+}
+.road-map__cours {
+  grid-column: 2/6;
+  grid-row: 3/5;
+}
+@media (max-width: 79.375em) {
+  .road-map__cours {
+    grid-column: 2/6;
+  }
+}
+@media (max-width: 61.99875em) {
+  .road-map__cours {
+    grid-column: 1/6;
+  }
+}
+@media (max-width: 580px) {
+  .road-map__cours {
+    grid-column: 1/7;
+  }
+}
+@media (max-width: 500px) {
+  .road-map__cours {
+    grid-column: 1/8;
+  }
+}
+@media (max-width: 400px) {
+  .road-map__cours {
+    grid-column: 2/12;
+  }
+}
+.road-map__challenge {
+  grid-column: 7/12;
+  grid-row: 4/10;
+}
+@media (max-width: 47.99875em) {
+  .road-map__challenge {
+    grid-column: 7/13;
+  }
+}
+@media (max-width: 580px) {
+  .road-map__challenge {
+    grid-column: 5/13;
+    grid-row: 5/9;
+  }
+}
+@media (max-width: 500px) {
+  .road-map__challenge {
+    grid-column: 4/13;
+    grid-row: 5/9;
+  }
+}
+@media (max-width: 29.99875em) {
+  .road-map__challenge {
+    grid-column: 2/12;
+  }
+}
+@media (max-width: 400px) {
+  .road-map__challenge {
+    grid-column: 1/13;
+  }
+}
+.road-map__cours-js {
+  grid-column: 1/6;
+  grid-row: 9/11;
+}
+@media (max-width: 580px) {
+  .road-map__cours-js {
+    grid-column: 1/7;
+  }
+}
+@media (max-width: 500px) {
+  .road-map__cours-js {
+    grid-column: 1/8;
+  }
+}
+@media (max-width: 400px) {
+  .road-map__cours-js {
+    grid-column: 2/12;
+  }
+}
+.road-map__last-project {
+  grid-column-start: 1;
+  grid-column-end: 13;
+  grid-row-start: 11;
+  grid-row-end: 12;
+}
+.road-map__githab {
+  grid-column: 3/9;
+  grid-row: 12/13;
+}
+@media (max-width: 29.99875em) {
+  .road-map__githab {
+    grid-column: 2/11;
+  }
+}
+@media (max-width: 580px) {
+  .road-map__githab {
+    grid-column: 3/11;
+  }
+}
+@media (max-width: 400px) {
+  .road-map__githab {
+    grid-column: 2/12;
+  }
+}
+
+@media (max-width: 29.99875em) {
+  .first-project {
+    flex-direction: column;
+  }
+}
+.first-project__photo {
+  flex: 0 1 50%;
+}
+@media (max-width: 29.99875em) {
+  .first-project__photo {
+    order: 1;
+  }
+}
+.first-project__photo img {
+  width: 100%;
+}
+@media (max-width: 47.99875em) {
+  .first-project__photo img {
+    height: 100%;
+    object-fit: fill;
+  }
+}
+.first-project__info {
+  flex: 0 1 50%;
+}
+@media (max-width: 29.99875em) {
+  .first-project__info {
+    order: 0;
+  }
+}
+@media (max-width: 29.99875em) {
+  .first-project__info.card {
+    border-bottom: none;
+  }
+}
+
+.place {
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 5px;
+  padding: 15px;
+  border-top: 3px solid #f7971d;
+  border-bottom: 3px solid #f7971d;
+}
+.card-title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+@media (max-width: 79.375em) {
+  .card-title {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 61.99875em) {
+  .card-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .card-title {
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 5px;
+  }
+}
+.card-description {
+  line-height: 29px;
+  margin-bottom: 5px;
+}
+@media (max-width: 79.375em) {
+  .card-description {
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 61.99875em) {
+  .card-description {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .card-description {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.card-link {
+  font-weight: 600;
+  display: block;
+}
+.card-link:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media (max-width: 79.375em) {
+  .card-link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 61.99875em) {
+  .card-link {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .card-link {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.card-photo img {
+  height: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.intensives {
+  display: flex;
+}
+@media (max-width: 580px) {
+  .intensives {
+    flex-wrap: wrap;
+  }
+}
+.intensives__info {
+  flex: 0 1 33.333%;
+  justify-content: start;
+}
+@media (max-width: 580px) {
+  .intensives__info {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 29.99875em) {
+  .intensives__info.card {
+    border-bottom: none;
+  }
+}
+.intensives__photo {
+  flex: 0 1 33.333%;
+}
+@media (max-width: 580px) {
+  .intensives__photo {
+    flex: 1 1 50%;
+  }
+}
+.intensives__photo img {
+  width: 100%;
+}
+@media (max-width: 47.99875em) {
+  .intensives__photo img {
+    object-fit: cover;
+  }
+}
+
+.challenge {
+  display: flex;
+  flex-direction: column;
+}
+.challenge__photo img {
+  width: 100%;
+  object-fit: cover;
+}
+.challenge__info.card {
+  border-bottom: none;
+}
+
+.last-project {
+  display: flex;
+}
+@media (max-width: 600px) {
+  .last-project {
+    flex-direction: column;
+  }
+}
+.last-project__photo {
+  flex: 0 1 60%;
+}
+@media (max-width: 700px) {
+  .last-project__photo {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .last-project__photo {
+    flex: 0 1 100%;
+    order: 2;
+  }
+}
+.last-project__photo img {
+  width: 100%;
+}
+@media (max-width: 61.99875em) {
+  .last-project__photo img {
+    height: 100%;
+    object-fit: fill;
+  }
+}
+.last-project__info {
+  flex: 1 1 40%;
+}
+@media (max-width: 700px) {
+  .last-project__info {
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .last-project__info {
+    flex: 0 1 100%;
+    order: 1;
+  }
+}
+@media (max-width: 600px) {
+  .last-project__info.card {
+    border-bottom: none;
+  }
+}
