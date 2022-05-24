@@ -962,6 +962,24 @@ body {
   }
 }
 
+.road-map {
+  margin-bottom: 180px;
+}
+@media (max-width: 61.99875em) {
+  .road-map {
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .road-map {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 350px) {
+  .road-map {
+    margin-bottom: 30px;
+  }
+}
 .road-map__wrapper {
   width: 100%;
   display: grid;
@@ -1333,4 +1351,26 @@ body {
   .last-project__info.card {
     border-bottom: none;
   }
+}
+
+.skills-card__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.swiper {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.swiper-slide {
+  position: relative;
+  flex-shrink: 0;
 }
