@@ -13,6 +13,13 @@
   font-weight: 600;
   font-style: normal;
 }
+@font-face {
+  font-family: "lg";
+  font-display: swap;
+  src: url("../fonts/lg.woff2") format("woff2"), url("../fonts/lg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 /*
 @include font("Gilroy", "Gilroy-Medium", "500", "normal");
 @include font("Gilroy", "Gilroy-SemiBold", "600", "normal");
@@ -1501,6 +1508,27 @@ a {
   margin-bottom: 7px;
 }
 
+.page__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+  padding: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 999;
+}
+.page__overlay img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .skills-card {
   position: relative;
   margin-bottom: 50px;
@@ -1623,6 +1651,33 @@ a {
   flex-shrink: 0;
 }
 
+.skills-card .swiper-scrollbar {
+  display: none;
+  height: 2px;
+  background-color: #f7971d;
+}
+@media (max-width: 47.99875em) {
+  .skills-card .swiper-scrollbar {
+    display: block;
+  }
+}
+@media (max-width: 47.99875em) {
+  .skills-card .swiper-scrollbar {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .skills-card .swiper-scrollbar {
+    margin-top: 20px;
+  }
+}
+
+.skills-card .swiper-scrollbar-drag {
+  cursor: pointer;
+  background-color: #000;
+  height: 100%;
+}
+
 .popup {
   color: #000;
   -webkit-overflow-scrolling: touch;
@@ -1721,6 +1776,7 @@ a {
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  text-align: center;
 }
 .thaks__title {
   display: block;
