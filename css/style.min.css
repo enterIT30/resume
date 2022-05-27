@@ -158,12 +158,9 @@ body {
 }
 .header._fix {
   position: fixed;
-  background-color: #f7971d;
+  background-color: #000;
   transition: all 0.3s ease 0s;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-.header._fix .icon-menu:hover span, .header._fix .icon-menu:hover::before, .header._fix .icon-menu:hover::after {
-  background-color: #000;
 }
 .header__container {
   position: relative;
@@ -1185,20 +1182,19 @@ a {
     grid-column: 1/6;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 47.99875em) {
   .road-map__cours {
     grid-column: 1/7;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .road-map__cours {
-    grid-column: 1/8;
-    grid-row: 3/4;
+    grid-column: 1/9;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .road-map__cours {
-    grid-column: 2/12;
+    grid-column: 1/13;
   }
 }
 .road-map__challenge {
@@ -1211,25 +1207,20 @@ a {
     grid-column: 7/13;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 47.99875em) {
   .road-map__challenge {
-    grid-column: 5/13;
+    grid-column: 6/13;
     grid-row: 4/5;
     margin-top: 0;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 580px) {
   .road-map__challenge {
     grid-column: 4/13;
-    grid-row: 4/5;
+    margin-top: 0;
   }
 }
 @media (max-width: 29.99875em) {
-  .road-map__challenge {
-    grid-column: 2/12;
-  }
-}
-@media (max-width: 400px) {
   .road-map__challenge {
     grid-column: 1/13;
   }
@@ -1245,30 +1236,35 @@ a {
     margin-top: -50%;
   }
 }
-@media (max-width: 580px) {
+@media (max-width: 47.99875em) {
   .road-map__cours-js {
-    grid-column: 1/9;
     grid-row: 5/6;
+    grid-column: 1/8;
     margin-top: 0%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 580px) {
   .road-map__cours-js {
-    grid-column: 2/12;
+    grid-column: 1/10;
+  }
+}
+@media (max-width: 29.99875em) {
+  .road-map__cours-js {
+    grid-column: 1/13;
   }
 }
 .road-map__last-project {
   grid-column: 1/13;
   grid-row: 6/7;
 }
-@media (max-width: 580px) {
-  .road-map__last-project {
-    grid-row: 6/7;
-  }
-}
 .road-map__githab {
   grid-column: 3/9;
   grid-row: 7/8;
+}
+@media (max-width: 47.99875em) {
+  .road-map__githab {
+    grid-column: 3/10;
+  }
 }
 @media (max-width: 29.99875em) {
   .road-map__githab {
@@ -1277,12 +1273,12 @@ a {
 }
 @media (max-width: 580px) {
   .road-map__githab {
-    grid-column: 3/11;
+    grid-column: 2/12;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 29.99875em) {
   .road-map__githab {
-    grid-column: 2/12;
+    grid-column: 1/13;
   }
 }
 
@@ -1380,13 +1376,12 @@ a {
 @media (max-width: 61.99875em) {
   .card-description {
     font-size: 18px;
-    line-height: 20px;
+    line-height: 24px;
   }
 }
 @media (max-width: 47.99875em) {
   .card-description {
     font-size: 16px;
-    line-height: 16px;
   }
 }
 .card-link {
