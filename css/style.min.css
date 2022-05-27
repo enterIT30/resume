@@ -156,6 +156,12 @@ body {
   width: 100%;
   z-index: 50;
 }
+.header._fix {
+  position: fixed;
+  background-color: #f7971d;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 .header__container {
   position: relative;
   display: flex;
@@ -395,31 +401,23 @@ body {
   }
 }
 
-.main-page, .user-info, .road-map, .skills {
-  margin-bottom: 100px;
-}
-@media (max-width: 79.375em) {
-  .main-page, .user-info, .road-map, .skills {
+/* .user-info, .road-map, .skills {
+  margin-top: 100px;
+  @media (max-width:$pc){
     margin-bottom: 80px;
   }
-}
-@media (max-width: 61.99875em) {
-  .main-page, .user-info, .road-map, .skills {
+  @media (max-width:$tablet){
     margin-bottom: 60px;
   }
-}
-@media (max-width: 29.99875em) {
-  .main-page, .user-info, .road-map, .skills {
+  @media (max-width:$mobileSmall){
     margin-bottom: 40px;
   }
-}
-@media (max-width: 350px) {
-  .main-page, .user-info, .road-map, .skills {
+  @media (max-width: 350px){
     margin-bottom: 30px;
   }
-}
-
+} */
 .main-title {
+  padding-top: 150px;
   font-size: 65px;
   text-transform: uppercase;
   text-align: center;
@@ -429,12 +427,19 @@ body {
   .main-title {
     font-size: 55px;
     margin-bottom: 60px;
+    padding-top: 130px;
   }
 }
 @media (max-width: 61.99875em) {
   .main-title {
     margin-bottom: 40px;
     font-size: 50px;
+    padding-top: 100px;
+  }
+}
+@media (max-width: 47.99875em) {
+  .main-title {
+    padding-top: 80px;
   }
 }
 @media (max-width: 29.99875em) {
