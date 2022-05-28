@@ -884,7 +884,7 @@ a {
 
 .additional-information {
   display: grid;
-  grid-template-areas: "engineer engineer" "youtube codewars" "youtube githab" "experience experience";
+  grid-template-areas: "engineer engineer" "youtube codewars" "youtube github" "experience experience";
   grid-template-rows: repeat(4, min-content);
   grid-template-columns: 32% calc(68% - 30px);
   grid-gap: 30px;
@@ -897,13 +897,13 @@ a {
 }
 @media (max-width: 61.99875em) {
   .additional-information {
-    grid-template-areas: "engineer engineer" "youtube youtube" "codewars githab" "experience experience";
+    grid-template-areas: "engineer engineer" "youtube youtube" "codewars github" "experience experience";
     grid-template-columns: 49% calc(51% - 25px);
   }
 }
 @media (max-width: 700px) {
   .additional-information {
-    grid-template-areas: "engineer" "youtube " "codewars" "githab" "experience";
+    grid-template-areas: "engineer" "youtube " "codewars" "github" "experience";
     grid-template-columns: 1fr;
   }
 }
@@ -1030,11 +1030,11 @@ a {
   }
 }
 
-#githab {
-  grid-area: githab;
+#github {
+  grid-area: github;
 }
-#githab .circle::after {
-  background-image: url(../img/icon/githab.png);
+#github .circle::after {
+  background-image: url(../img/icon/github.png);
   background-size: 105%;
   left: 11px;
   top: 15px;
@@ -1042,7 +1042,7 @@ a {
   height: 55px;
 }
 @media (max-width: 29.99875em) {
-  #githab .circle::after {
+  #github .circle::after {
     width: 43px;
     height: 43px;
     left: 8px;
@@ -1257,27 +1257,27 @@ a {
   grid-column: 1/13;
   grid-row: 6/7;
 }
-.road-map__githab {
+.road-map__github {
   grid-column: 3/9;
   grid-row: 7/8;
 }
 @media (max-width: 47.99875em) {
-  .road-map__githab {
+  .road-map__github {
     grid-column: 3/10;
   }
 }
 @media (max-width: 29.99875em) {
-  .road-map__githab {
+  .road-map__github {
     grid-column: 2/11;
   }
 }
 @media (max-width: 580px) {
-  .road-map__githab {
+  .road-map__github {
     grid-column: 2/12;
   }
 }
 @media (max-width: 29.99875em) {
-  .road-map__githab {
+  .road-map__github {
     grid-column: 1/13;
   }
 }
@@ -1566,7 +1566,7 @@ a {
   }
 }
 
-.githab__list li:not(:last-child) {
+.github__list li:not(:last-child) {
   margin-bottom: 7px;
 }
 
